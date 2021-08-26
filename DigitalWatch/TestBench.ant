@@ -1,0 +1,145 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2007 Xilinx, Inc.
+// All Right Reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 9.2i
+//  \   \         Application : ISE
+//  /   /         Filename : TestBench.ant
+// /___/   /\     Timestamp : Tue May 15 16:00:43 2018
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: 
+//Design Name: TestBench
+//Device: Xilinx
+//
+`timescale 1ns/1ps
+
+module TestBench;
+    reg CLK = 1'b0;
+    reg RST = 1'b0;
+    wire [3:0] sec1;
+    wire [3:0] sec2;
+    wire [3:0] min1;
+    wire [3:0] min2;
+    wire [3:0] hour1;
+    wire [3:0] hour2;
+
+    parameter PERIOD = 200;
+    parameter real DUTY_CYCLE = 0.5;
+    parameter OFFSET = 100;
+
+    initial    // Clock process for CLK
+    begin
+        #OFFSET;
+        forever
+        begin
+            CLK = 1'b0;
+            #(PERIOD-(PERIOD*DUTY_CYCLE)) CLK = 1'b1;
+            #(PERIOD*DUTY_CYCLE);
+        end
+    end
+
+    Stopwatch UUT (
+        .CLK(CLK),
+        .RST(RST),
+        .sec1(sec1),
+        .sec2(sec2),
+        .min1(min1),
+        .min2(min2),
+        .hour1(hour1),
+        .hour2(hour2));
+
+    integer TX_FILE = 0;
+    integer TX_ERROR = 0;
+    
+    initial begin    // Annotation process for clock CLK
+        #0;
+        ANNOTATE_sec1;
+        ANNOTATE_sec2;
+        ANNOTATE_min1;
+        ANNOTATE_min2;
+        ANNOTATE_hour1;
+        ANNOTATE_hour2;
+        #OFFSET;
+        forever begin
+            #115;
+            ANNOTATE_sec1;
+            ANNOTATE_sec2;
+            ANNOTATE_min1;
+            ANNOTATE_min2;
+            ANNOTATE_hour1;
+            ANNOTATE_hour2;
+            #85;
+        end
+    end
+
+    initial begin  // Open the annotations file...
+        TX_FILE = $fopen("C:\\Users\\HaBosh\\Desktop\\Dgital Watch\\DigitalWatch\\TestBench.ano");
+        #1200 // Final time:  1200 ns
+        $display("Success! Annotation Simulation Complete.");
+        $fdisplay(TX_FILE, "Total[%d]", TX_ERROR);
+        $fclose(TX_FILE);
+        $finish;
+    end
+
+    initial begin
+        // -------------  Current Time:  100ns
+        #100;
+        RST = 1'b1;
+        // -------------------------------------
+    end
+
+    task ANNOTATE_sec1;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,sec1,%b]", $time, sec1);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_sec2;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,sec2,%b]", $time, sec2);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_min1;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,min1,%b]", $time, min1);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_min2;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,min2,%b]", $time, min2);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_hour1;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,hour1,%b]", $time, hour1);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+    task ANNOTATE_hour2;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,hour2,%b]", $time, hour2);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+endmodule
+

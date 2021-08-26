@@ -1,0 +1,4 @@
+vhdl work "Substraction.vhd"
+vhdl work "Multiplication.vhd"
+vhdl work "Division.vhd"
+vhdl work "Calculator.vhd"

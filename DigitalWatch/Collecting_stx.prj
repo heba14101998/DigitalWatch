@@ -1,0 +1,6 @@
+vhdl isim_temp "comparator.vhd"
+vhdl isim_temp "DigitalWatch.vhd"
+vhdl isim_temp "StopWatch.vhd"
+vhdl isim_temp "Pomodoro.vhd"
+vhdl isim_temp "Alarm.vhd"
+vhdl isim_temp "D:/Electric/second term/logic/VHDL/DigitalWatch/Collecting.vhd"

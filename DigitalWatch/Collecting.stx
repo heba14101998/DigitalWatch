@@ -1,0 +1,27 @@
+Release 9.2i - xst J.36
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.56 s | Elapsed : 0.00 / 0.00 s
+ 
+--> 
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/StopWatch.vhd" in Library work.
+Architecture watch of Entity stopwatch is up to date.
+Compiling vhdl file "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Alarm.vhd" in Library work.
+Architecture behavioral of Entity alarm is up to date.
+Compiling vhdl file "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/collecting.vhd" in Library work.
+Entity <collecting> compiled.
+Entity <collecting> (Architecture <behavioral>) compiled.
+ERROR:HDLParsers - Cannot reanme dependency database for library "work", file is "xst/work/hdpdeps.ref".  Temporary database file "C:\\Users\HaBosh\Desktop\Dgital Watch\DigitalWatch\xst\work\xil_19564_8" will remain.  System error message is:  File exists
+CPU : 0.64 / 1.21 s | Elapsed : 1.00 / 1.00 s
+ 
+--> 
+
+Total memory usage is 229504 kilobytes
+
+Number of errors   :    1 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

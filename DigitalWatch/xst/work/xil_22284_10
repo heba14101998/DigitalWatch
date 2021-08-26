@@ -1,0 +1,105 @@
+V3 51
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Alarm.vhd" 2018/05/15.21:51:55 J.36
+EN work/Alarm 1526414217 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Alarm.vhd" \
+      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
+      PB ieee/STD_LOGIC_UNSIGNED 1177545583 PH ieee/NUMERIC_STD 1177545583
+AR work/Alarm/behavioral 1526414218 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Alarm.vhd" \
+      EN work/Alarm 1526414217 CP DigitalWatch CP comparator
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/comparator.vhd" 2018/05/14.20:42:38 J.36
+EN work/comparator 1526408839 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/comparator.vhd" \
+      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
+      PB ieee/STD_LOGIC_UNSIGNED 1177545583
+AR work/comparator/comparator_arc 1526408840 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/comparator.vhd" \
+      EN work/comparator 1526408839
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/DigitalWatch.vhd" 2018/05/15.20:49:03 J.36
+EN work/DigitalWatch 1526414213 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/DigitalWatch.vhd" \
+      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
+      PB ieee/STD_LOGIC_UNSIGNED 1177545583 PH ieee/NUMERIC_STD 1177545583
+AR work/DigitalWatch/Watch 1526414214 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/DigitalWatch.vhd" \
+      EN work/DigitalWatch 1526414213
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Pomodoro.vhd" 2018/05/15.17:13:07 J.36
+EN work/Pomodoro 1526408843 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Pomodoro.vhd" \
+      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
+      PB ieee/STD_LOGIC_UNSIGNED 1177545583 PH ieee/NUMERIC_STD 1177545583
+AR work/Pomodoro/Behavioral 1526408844 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Pomodoro.vhd" \
+      EN work/Pomodoro 1526408843
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/StopWatch.vhd" 2018/05/15.19:30:17 J.36
+EN work/Stopwatch 1526414215 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/StopWatch.vhd" \
+      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
+      PB ieee/STD_LOGIC_UNSIGNED 1177545583 PH ieee/NUMERIC_STD 1177545583
+AR work/Stopwatch/Watch 1526414216 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/StopWatch.vhd" \
+      EN work/Stopwatch 1526414215
+FL "D:/Electric/second term/logic/VHDL/DigitalWatch/Addition.vhd" 2018/05/13.01:30:04 J.36
+EN work/addder 1526401738 \
+      FL "D:/Electric/second term/logic/VHDL/DigitalWatch/Addition.vhd" \
+      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
+      PB ieee/STD_LOGIC_UNSIGNED 1177545583
+AR work/addder/Behavioral 1526401739 \
+      FL "D:/Electric/second term/logic/VHDL/DigitalWatch/Addition.vhd" \
+      EN work/addder 1526401738 CP f_a
+FL "D:/Electric/second term/logic/VHDL/DigitalWatch/Calculator.vhd" 2018/05/13.01:30:06 J.36
+EN work/calc 1526401746 \
+      FL "D:/Electric/second term/logic/VHDL/DigitalWatch/Calculator.vhd" \
+      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
+      PB ieee/STD_LOGIC_UNSIGNED 1177545583
+AR work/calc/Behavioral 1526401747 \
+      FL "D:/Electric/second term/logic/VHDL/DigitalWatch/Calculator.vhd" \
+      EN work/calc 1526401746 CP count CP addder CP sub CP mult CP div
+FL "D:/Electric/second term/logic/VHDL/DigitalWatch/Collecting.vhd" 2018/05/15.21:56:30 J.36
+EN work/Collecting 1526414219 \
+      FL "D:/Electric/second term/logic/VHDL/DigitalWatch/Collecting.vhd" \
+      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
+      PB ieee/STD_LOGIC_UNSIGNED 1177545583
+AR work/Collecting/Behavioral 1526414220 \
+      FL "D:/Electric/second term/logic/VHDL/DigitalWatch/Collecting.vhd" \
+      EN work/Collecting 1526414219 CP dig_watch CP stopwatch CP Pomodoro CP Alarm
+FL "D:/Electric/second term/logic/VHDL/DigitalWatch/Count.vhd" 2018/05/15.17:58:27 J.36
+EN work/counter 1526399922 \
+      FL "D:/Electric/second term/logic/VHDL/DigitalWatch/Count.vhd" \
+      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
+      PB ieee/STD_LOGIC_UNSIGNED 1177545583 PH ieee/NUMERIC_STD 1177545583
+AR work/counter/Behavioral 1526399923 \
+      FL "D:/Electric/second term/logic/VHDL/DigitalWatch/Count.vhd" \
+      EN work/counter 1526399922
+FL "D:/Electric/second term/logic/VHDL/DigitalWatch/Division.vhd" 2018/05/13.01:30:05 J.36
+EN work/div 1526401744 \
+      FL "D:/Electric/second term/logic/VHDL/DigitalWatch/Division.vhd" \
+      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
+      PB ieee/STD_LOGIC_UNSIGNED 1177545583
+AR work/div/Behavioral 1526401745 \
+      FL "D:/Electric/second term/logic/VHDL/DigitalWatch/Division.vhd" \
+      EN work/div 1526401744
+FL "D:/Electric/second term/logic/VHDL/DigitalWatch/FullAdder.vhd" 2018/05/11.23:13:27 J.36
+EN work/f_a 1526401736 \
+      FL "D:/Electric/second term/logic/VHDL/DigitalWatch/FullAdder.vhd" \
+      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
+      PB ieee/STD_LOGIC_UNSIGNED 1177545583
+AR work/f_a/Behavioral 1526401737 \
+      FL "D:/Electric/second term/logic/VHDL/DigitalWatch/FullAdder.vhd" \
+      EN work/f_a 1526401736
+FL "D:/Electric/second term/logic/VHDL/DigitalWatch/Multiplication .vhd" 2018/05/13.01:30:05 J.36
+EN work/mult 1526401742 \
+      FL "D:/Electric/second term/logic/VHDL/DigitalWatch/Multiplication .vhd" \
+      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
+      PB ieee/STD_LOGIC_UNSIGNED 1177545583
+AR work/mult/Behavioral 1526401743 \
+      FL "D:/Electric/second term/logic/VHDL/DigitalWatch/Multiplication .vhd" \
+      EN work/mult 1526401742 CP f_a
+FL "D:/Electric/second term/logic/VHDL/DigitalWatch/Substraction.vhd" 2018/05/13.01:30:04 J.36
+EN work/sub 1526401740 \
+      FL "D:/Electric/second term/logic/VHDL/DigitalWatch/Substraction.vhd" \
+      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
+      PB ieee/STD_LOGIC_UNSIGNED 1177545583
+AR work/sub/Behavioral 1526401741 \
+      FL "D:/Electric/second term/logic/VHDL/DigitalWatch/Substraction.vhd" \
+      EN work/sub 1526401740 CP f_a

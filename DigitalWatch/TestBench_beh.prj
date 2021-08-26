@@ -1,0 +1,3 @@
+vhdl work "StopWatch.vhd"
+verilog work "TestBench.tfw"
+verilog work "E:/Xilinx/verilog/src/glbl.v"

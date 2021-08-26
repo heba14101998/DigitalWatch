@@ -1,0 +1,102 @@
+V3 51
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Alarm.vhd" 2018/05/15.22:54:10 J.36
+EN work/Alarm 1526419134 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Alarm.vhd" \
+      PB ieee/std_logic_1164 1179176983 PB ieee/std_logic_arith 1179176985 \
+      PB ieee/STD_LOGIC_UNSIGNED 1179176991 PB ieee/NUMERIC_STD 1179176997
+AR work/Alarm/behavioral 1526419135 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Alarm.vhd" \
+      EN work/Alarm 1526419134 CP DigitalWatch CP comparator
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/BCD_Counter.vhd" 2018/05/15.15:57:25 J.36
+EN work/BCD_Counter 1526392656 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/BCD_Counter.vhd" \
+      PB ieee/std_logic_1164 1179176983 PB ieee/std_logic_arith 1179176985 \
+      PB ieee/STD_LOGIC_UNSIGNED 1179176991
+AR work/BCD_Counter/Behavioral 1526392657 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/BCD_Counter.vhd" \
+      EN work/BCD_Counter 1526392656
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/collecting.vhd" 2018/05/15.22:54:10 J.36
+EN work/Collecting 1526419136 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/collecting.vhd" \
+      PB ieee/std_logic_1164 1179176983 PB ieee/std_logic_arith 1179176985 \
+      PB ieee/STD_LOGIC_UNSIGNED 1179176991
+AR work/Collecting/Behavioral 1526419137 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/collecting.vhd" \
+      EN work/Collecting 1526419136 CP dig_watch CP stopwatch CP Pomodoro CP Alarm
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/comparator.vhd" 2018/05/14.20:42:38 J.36
+EN work/comparator 1526409449 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/comparator.vhd" \
+      PB ieee/std_logic_1164 1179176983 PB ieee/std_logic_arith 1179176985 \
+      PB ieee/STD_LOGIC_UNSIGNED 1179176991
+AR work/comparator/comparator_arc 1526409450 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/comparator.vhd" \
+      EN work/comparator 1526409449
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/DigitalWatch.vhd" 2018/05/15.22:09:53 J.36
+EN work/DigitalWatch 1526415103 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/DigitalWatch.vhd" \
+      PB ieee/std_logic_1164 1179176983 PB ieee/std_logic_arith 1179176985 \
+      PB ieee/STD_LOGIC_UNSIGNED 1179176991 PB ieee/NUMERIC_STD 1179176997
+AR work/DigitalWatch/Watch 1526415104 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/DigitalWatch.vhd" \
+      EN work/DigitalWatch 1526415103
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Pomodoro.vhd" 2018/05/15.21:06:44 J.36
+EN work/Pomodoro 1526411302 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Pomodoro.vhd" \
+      PB ieee/std_logic_1164 1179176983 PB ieee/std_logic_arith 1179176985 \
+      PB ieee/STD_LOGIC_UNSIGNED 1179176991 PB ieee/NUMERIC_STD 1179176997
+AR work/Pomodoro/watch 1526411303 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Pomodoro.vhd" \
+      EN work/Pomodoro 1526411302
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/StopWatch.vhd" 2018/05/15.22:11:18 J.36
+EN work/Stopwatch 1526415105 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/StopWatch.vhd" \
+      PB ieee/std_logic_1164 1179176983 PB ieee/std_logic_arith 1179176985 \
+      PB ieee/STD_LOGIC_UNSIGNED 1179176991 PB ieee/NUMERIC_STD 1179176997
+AR work/Stopwatch/Watch 1526415106 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/StopWatch.vhd" \
+      EN work/Stopwatch 1526415105
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/TB.tfw" 2018/05/15.23:31:51 J.36
+MO work/TB FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/TB.tfw" \
+      MI Collecting
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/TEST.tfw" 2018/05/15.22:34:08 J.36
+MO work/TEST FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/TEST.tfw" \
+      MI Collecting
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/TestBench.tfw" 2018/05/15.16:00:43 J.36
+MO work/TestBench \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/TestBench.tfw" \
+      MI Stopwatch
+FL "D:/Electric/second term/logic/VHDL/DigitalWatch/Addition.vhd" 2018/05/13.01:30:04 J.36
+EN work/addder 1526400083 \
+      FL "D:/Electric/second term/logic/VHDL/DigitalWatch/Addition.vhd" \
+      PB ieee/std_logic_1164 1179176983 PB ieee/std_logic_arith 1179176985 \
+      PB ieee/STD_LOGIC_UNSIGNED 1179176991
+AR work/addder/Behavioral 1526400084 \
+      FL "D:/Electric/second term/logic/VHDL/DigitalWatch/Addition.vhd" \
+      EN work/addder 1526400083 CP f_a
+FL "D:/Electric/second term/logic/VHDL/DigitalWatch/Collecting.vhd" 2018/05/15.22:07:40 J.36
+FL "D:/Electric/second term/logic/VHDL/DigitalWatch/Division.vhd" 2018/05/13.01:30:05 J.36
+EN work/div 1526400921 \
+      FL "D:/Electric/second term/logic/VHDL/DigitalWatch/Division.vhd" \
+      PB ieee/std_logic_1164 1179176983 PB ieee/std_logic_arith 1179176985 \
+      PB ieee/STD_LOGIC_UNSIGNED 1179176991
+AR work/div/Behavioral 1526400922 \
+      FL "D:/Electric/second term/logic/VHDL/DigitalWatch/Division.vhd" \
+      EN work/div 1526400921
+FL "D:/Electric/second term/logic/VHDL/DigitalWatch/FullAdder.vhd" 2018/05/11.23:13:27 J.36
+EN work/f_a 1526400081 \
+      FL "D:/Electric/second term/logic/VHDL/DigitalWatch/FullAdder.vhd" \
+      PB ieee/std_logic_1164 1179176983 PB ieee/std_logic_arith 1179176985 \
+      PB ieee/STD_LOGIC_UNSIGNED 1179176991
+AR work/f_a/Behavioral 1526400082 \
+      FL "D:/Electric/second term/logic/VHDL/DigitalWatch/FullAdder.vhd" \
+      EN work/f_a 1526400081
+FL "D:/Electric/second term/logic/VHDL/DigitalWatch/Multiplication .vhd" 2018/05/13.01:30:05 J.36
+EN work/mult 1526400477 \
+      FL "D:/Electric/second term/logic/VHDL/DigitalWatch/Multiplication .vhd" \
+      PB ieee/std_logic_1164 1179176983 PB ieee/std_logic_arith 1179176985 \
+      PB ieee/STD_LOGIC_UNSIGNED 1179176991
+AR work/mult/Behavioral 1526400478 \
+      FL "D:/Electric/second term/logic/VHDL/DigitalWatch/Multiplication .vhd" \
+      EN work/mult 1526400477 CP f_a
+FL $XILINX/verilog/src/glbl.v 2007/05/18.23:22:56 J.36
+MO work/glbl FL $XILINX/verilog/src/glbl.v

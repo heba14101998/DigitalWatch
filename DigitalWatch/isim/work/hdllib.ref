@@ -1,0 +1,30 @@
+AR comparator comparator_arc "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/comparator.vhd" sub00/vhpl16 1526409450
+AR dig_watch watch "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/DigitalWatch.vhd" sub00/vhpl03 1526409448
+EN mult NULL "D:/Electric/second term/logic/VHDL/DigitalWatch/Multiplication .vhd" sub00/vhpl10 1526400477
+EN alarm NULL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Alarm.vhd" sub00/vhpl19 1526419134
+EN f_a NULL "D:/Electric/second term/logic/VHDL/DigitalWatch/FullAdder.vhd" sub00/vhpl06 1526400081
+EN pomodoro NULL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Pomodoro.vhd" sub00/vhpl17 1526411302
+EN collecting NULL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/collecting.vhd" sub00/vhpl21 1526419136
+AR stopwatch watch "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/StopWatch.vhd" sub00/vhpl01 1526415106
+EN div NULL "D:/Electric/second term/logic/VHDL/DigitalWatch/Division.vhd" sub00/vhpl12 1526400921
+EN digitalwatch NULL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/DigitalWatch.vhd" sub00/vhpl14 1526415103
+EN addder NULL "D:/Electric/second term/logic/VHDL/DigitalWatch/Addition.vhd" sub00/vhpl08 1526400083
+EN bcd_counter NULL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/BCD_Counter.vhd" sub00/vhpl04 1526392656
+AR addder behavioral "D:/Electric/second term/logic/VHDL/DigitalWatch/Addition.vhd" sub00/vhpl09 1526400084
+MO TB NULL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/TB.tfw" vlg66/_t_b.bin 1526419921
+AR div behavioral "D:/Electric/second term/logic/VHDL/DigitalWatch/Division.vhd" sub00/vhpl13 1526400922
+AR pomodoro watch "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Pomodoro.vhd" sub00/vhpl24 1526411303
+AR collecting behavioral "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/collecting.vhd" sub00/vhpl22 1526419137
+MO TextBench NULL "C:/Users/HaBosh/Desktop/Dgital Watch/D/DigitalWatch/TextBench.tfw" vlg59/_text_bench.bin 1526320877
+AR alarm behavioral "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Alarm.vhd" sub00/vhpl20 1526419135
+MO glbl NULL E:/Xilinx/verilog/src/glbl.v vlg2D/glbl.bin 1526392521
+AR f_a behavioral "D:/Electric/second term/logic/VHDL/DigitalWatch/FullAdder.vhd" sub00/vhpl07 1526400082
+EN dig_watch NULL "C:/Users/HaBosh/Desktop/Dgital Watch/D/DigitalWatch/DigitalWatch.vhd" sub00/vhpl02 1526304815
+EN comparator NULL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/comparator.vhd" sub00/vhpl15 1526409449
+AR digitalwatch watch "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/DigitalWatch.vhd" sub00/vhpl23 1526415104
+MO TEST NULL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/TEST.tfw" vlg34/_t_e_s_t.bin 1526416453
+AR bcd_counter behavioral "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/BCD_Counter.vhd" sub00/vhpl05 1526392657
+AR pomodoro behavioral "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Pomodoro.vhd" sub00/vhpl18 1526409454
+EN stopwatch NULL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/StopWatch.vhd" sub00/vhpl00 1526415105
+AR mult behavioral "D:/Electric/second term/logic/VHDL/DigitalWatch/Multiplication .vhd" sub00/vhpl11 1526400478
+MO TestBench NULL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/TestBench.tfw" vlg2C/_test_bench.bin 1526392847

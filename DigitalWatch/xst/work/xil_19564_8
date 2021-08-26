@@ -1,0 +1,50 @@
+V3 25
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Alarm.vhd" 2018/05/15.22:54:10 J.36
+EN work/Alarm 1526420526 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Alarm.vhd" \
+      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
+      PB ieee/STD_LOGIC_UNSIGNED 1177545583 PH ieee/NUMERIC_STD 1177545583
+AR work/Alarm/behavioral 1526420527 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Alarm.vhd" \
+      EN work/Alarm 1526420526 CP DigitalWatch CP comparator
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/collecting.vhd" 2018/05/15.23:41:48 J.36
+EN work/Collecting 1526420528 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/collecting.vhd" \
+      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
+      PB ieee/STD_LOGIC_UNSIGNED 1177545583
+AR work/Collecting/Behavioral 1526420529 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/collecting.vhd" \
+      EN work/Collecting 1526420528 CP dig_watch CP stopwatch CP Pomodoro CP Alarm
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/comparator.vhd" 2018/05/14.20:42:38 J.36
+EN work/comparator 1526417705 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/comparator.vhd" \
+      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
+      PB ieee/STD_LOGIC_UNSIGNED 1177545583
+AR work/comparator/comparator_arc 1526417706 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/comparator.vhd" \
+      EN work/comparator 1526417705
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/DigitalWatch.vhd" 2018/05/15.22:09:53 J.36
+EN work/DigitalWatch 1526415181 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/DigitalWatch.vhd" \
+      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
+      PB ieee/STD_LOGIC_UNSIGNED 1177545583 PH ieee/NUMERIC_STD 1177545583
+AR work/DigitalWatch/Watch 1526415182 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/DigitalWatch.vhd" \
+      EN work/DigitalWatch 1526415181
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Pomodoro.vhd" 2018/05/15.21:06:44 J.36
+EN work/Pomodoro 1526415187 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Pomodoro.vhd" \
+      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
+      PB ieee/STD_LOGIC_UNSIGNED 1177545583 PH ieee/NUMERIC_STD 1177545583
+AR work/Pomodoro/watch 1526415188 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Pomodoro.vhd" \
+      EN work/Pomodoro 1526415187
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/StopWatch.vhd" 2018/05/15.22:11:18 J.36
+EN work/Stopwatch 1526420524 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/StopWatch.vhd" \
+      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
+      PB ieee/STD_LOGIC_UNSIGNED 1177545583 PH ieee/NUMERIC_STD 1177545583
+AR work/Stopwatch/Watch 1526420525 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/StopWatch.vhd" \
+      EN work/Stopwatch 1526420524
+FL "D:/Electric/second term/logic/VHDL/DigitalWatch/Collecting.vhd" 2018/05/15.22:07:40 J.36

@@ -1,0 +1,740 @@
+--------------------------------------------------------------------------------
+-- Copyright (c) 1995-2007 Xilinx, Inc.
+-- All Right Reserved.
+--------------------------------------------------------------------------------
+--   ____  ____ 
+--  /   /\/   / 
+-- /___/  \  /    Vendor: Xilinx 
+-- \   \   \/     Version : 9.2i
+--  \   \         Application : ISE
+--  /   /         Filename : TEST.ant
+-- /___/   /\     Timestamp : Tue May 15 22:55:04 2018
+-- \   \  /  \ 
+--  \___\/\___\ 
+--
+--Command: 
+--Design Name: TEST
+--Device: Xilinx
+--
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+USE IEEE.STD_LOGIC_TEXTIO.ALL;
+USE STD.TEXTIO.ALL;
+
+ENTITY TEST IS
+END TEST;
+
+ARCHITECTURE testbench_arch OF TEST IS
+    FILE RESULTS: TEXT OPEN WRITE_MODE IS "C:\Users\HaBosh\Desktop\Dgital Watch\DigitalWatch\TEST.ano";
+
+    COMPONENT Collecting
+        PORT (
+            CLK : In std_logic;
+            RST : In std_logic;
+            StopWatch_on : In std_logic;
+            StopWatch_off : In std_logic;
+            Pomodoro_in : In std_logic;
+            Calculator_in : In std_logic;
+            Alarm_in : In std_logic;
+            ssec1 : In std_logic_vector (3 DownTo 0);
+            ssec2 : In std_logic_vector (3 DownTo 0);
+            mmin1 : In std_logic_vector (3 DownTo 0);
+            mmin2 : In std_logic_vector (3 DownTo 0);
+            hhour1 : In std_logic_vector (3 DownTo 0);
+            hhour2 : In std_logic_vector (3 DownTo 0);
+            dday1 : In std_logic_vector (3 DownTo 0);
+            dday2 : In std_logic_vector (3 DownTo 0);
+            mmonth1 : In std_logic_vector (3 DownTo 0);
+            mmonth2 : In std_logic_vector (3 DownTo 0);
+            yyear1 : In std_logic_vector (3 DownTo 0);
+            yyear2 : In std_logic_vector (3 DownTo 0);
+            yyear3 : In std_logic_vector (3 DownTo 0);
+            yyear4 : In std_logic_vector (3 DownTo 0);
+            sec1 : Out std_logic_vector (3 DownTo 0);
+            sec2 : Out std_logic_vector (3 DownTo 0);
+            min1 : Out std_logic_vector (3 DownTo 0);
+            min2 : Out std_logic_vector (3 DownTo 0);
+            hour1 : Out std_logic_vector (3 DownTo 0);
+            hour2 : Out std_logic_vector (3 DownTo 0);
+            day1 : Out std_logic_vector (3 DownTo 0);
+            day2 : Out std_logic_vector (3 DownTo 0);
+            month1 : Out std_logic_vector (3 DownTo 0);
+            month2 : Out std_logic_vector (3 DownTo 0);
+            year1 : Out std_logic_vector (3 DownTo 0);
+            year2 : Out std_logic_vector (3 DownTo 0);
+            year3 : Out std_logic_vector (3 DownTo 0);
+            year4 : Out std_logic_vector (3 DownTo 0);
+            sec1_s : Out std_logic_vector (3 DownTo 0);
+            sec2_s : Out std_logic_vector (3 DownTo 0);
+            min1_m : Out std_logic_vector (3 DownTo 0);
+            min2_m : Out std_logic_vector (3 DownTo 0);
+            hour1_h : Out std_logic_vector (3 DownTo 0);
+            hour2_h : Out std_logic_vector (3 DownTo 0);
+            seconds_study1 : Out std_logic_vector (3 DownTo 0);
+            seconds_study2 : Out std_logic_vector (3 DownTo 0);
+            minutes_study1 : Out std_logic_vector (3 DownTo 0);
+            minutes_study2 : Out std_logic_vector (3 DownTo 0);
+            seconds_break1 : Out std_logic_vector (3 DownTo 0);
+            seconds_break2 : Out std_logic_vector (3 DownTo 0);
+            minutes_break1 : Out std_logic_vector (3 DownTo 0);
+            min1_A : In std_logic_vector (3 DownTo 0);
+            min2_A : In std_logic_vector (3 DownTo 0);
+            hour1_A : In std_logic_vector (3 DownTo 0);
+            hour2_A : In std_logic_vector (3 DownTo 0);
+            Buzz : Out std_logic
+        );
+    END COMPONENT;
+
+    SIGNAL CLK : std_logic := '0';
+    SIGNAL RST : std_logic := '0';
+    SIGNAL StopWatch_on : std_logic := '0';
+    SIGNAL StopWatch_off : std_logic := '0';
+    SIGNAL Pomodoro_in : std_logic := '0';
+    SIGNAL Calculator_in : std_logic := '0';
+    SIGNAL Alarm_in : std_logic := '0';
+    SIGNAL ssec1 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL ssec2 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL mmin1 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL mmin2 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL hhour1 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL hhour2 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL dday1 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL dday2 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL mmonth1 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL mmonth2 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL yyear1 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL yyear2 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL yyear3 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL yyear4 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL sec1 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL sec2 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL min1 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL min2 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL hour1 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL hour2 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL day1 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL day2 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL month1 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL month2 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL year1 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL year2 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL year3 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL year4 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL sec1_s : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL sec2_s : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL min1_m : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL min2_m : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL hour1_h : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL hour2_h : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL seconds_study1 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL seconds_study2 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL minutes_study1 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL minutes_study2 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL seconds_break1 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL seconds_break2 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL minutes_break1 : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL min1_A : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL min2_A : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL hour1_A : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL hour2_A : std_logic_vector (3 DownTo 0) := "0000";
+    SIGNAL Buzz : std_logic := '0';
+
+    SHARED VARIABLE TX_ERROR : INTEGER := 0;
+    SHARED VARIABLE TX_OUT : LINE;
+
+    constant PERIOD : time := 200 ns;
+    constant DUTY_CYCLE : real := 0.5;
+    constant OFFSET : time := 100 ns;
+
+    BEGIN
+        UUT : Collecting
+        PORT MAP (
+            CLK => CLK,
+            RST => RST,
+            StopWatch_on => StopWatch_on,
+            StopWatch_off => StopWatch_off,
+            Pomodoro_in => Pomodoro_in,
+            Calculator_in => Calculator_in,
+            Alarm_in => Alarm_in,
+            ssec1 => ssec1,
+            ssec2 => ssec2,
+            mmin1 => mmin1,
+            mmin2 => mmin2,
+            hhour1 => hhour1,
+            hhour2 => hhour2,
+            dday1 => dday1,
+            dday2 => dday2,
+            mmonth1 => mmonth1,
+            mmonth2 => mmonth2,
+            yyear1 => yyear1,
+            yyear2 => yyear2,
+            yyear3 => yyear3,
+            yyear4 => yyear4,
+            sec1 => sec1,
+            sec2 => sec2,
+            min1 => min1,
+            min2 => min2,
+            hour1 => hour1,
+            hour2 => hour2,
+            day1 => day1,
+            day2 => day2,
+            month1 => month1,
+            month2 => month2,
+            year1 => year1,
+            year2 => year2,
+            year3 => year3,
+            year4 => year4,
+            sec1_s => sec1_s,
+            sec2_s => sec2_s,
+            min1_m => min1_m,
+            min2_m => min2_m,
+            hour1_h => hour1_h,
+            hour2_h => hour2_h,
+            seconds_study1 => seconds_study1,
+            seconds_study2 => seconds_study2,
+            minutes_study1 => minutes_study1,
+            minutes_study2 => minutes_study2,
+            seconds_break1 => seconds_break1,
+            seconds_break2 => seconds_break2,
+            minutes_break1 => minutes_break1,
+            min1_A => min1_A,
+            min2_A => min2_A,
+            hour1_A => hour1_A,
+            hour2_A => hour2_A,
+            Buzz => Buzz
+        );
+
+        PROCESS    -- clock process for CLK
+        BEGIN
+            WAIT for OFFSET;
+            CLOCK_LOOP : LOOP
+                CLK <= '0';
+                WAIT FOR (PERIOD - (PERIOD * DUTY_CYCLE));
+                CLK <= '1';
+                WAIT FOR (PERIOD * DUTY_CYCLE);
+            END LOOP CLOCK_LOOP;
+        END PROCESS;
+
+        PROCESS    -- Annotation process for CLK
+            VARIABLE TX_TIME : INTEGER := 0;
+
+            PROCEDURE ANNOTATE_sec1(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", sec1, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, sec1);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_sec2(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", sec2, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, sec2);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_min1(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", min1, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, min1);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_min2(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", min2, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, min2);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_hour1(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", hour1, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, hour1);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_hour2(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", hour2, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, hour2);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_day1(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", day1, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, day1);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_day2(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", day2, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, day2);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_month1(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", month1, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, month1);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_month2(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", month2, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, month2);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_year1(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", year1, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, year1);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_year2(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", year2, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, year2);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_year3(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", year3, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, year3);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_year4(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", year4, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, year4);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_sec1_s(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", sec1_s, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, sec1_s);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_sec2_s(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", sec2_s, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, sec2_s);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_min1_m(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", min1_m, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, min1_m);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_min2_m(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", min2_m, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, min2_m);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_hour1_h(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", hour1_h, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, hour1_h);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_hour2_h(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", hour2_h, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, hour2_h);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_seconds_study1(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", seconds_study1, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, seconds_study1);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_seconds_study2(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", seconds_study2, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, seconds_study2);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_minutes_study1(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", minutes_study1, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, minutes_study1);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_minutes_study2(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", minutes_study2, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, minutes_study2);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_seconds_break1(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", seconds_break1, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, seconds_break1);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_seconds_break2(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", seconds_break2, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, seconds_break2);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_minutes_break1(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", minutes_break1, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, minutes_break1);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+            PROCEDURE ANNOTATE_Buzz(
+                TX_TIME : INTEGER
+            ) IS
+                VARIABLE TX_STR : String(1 to 4096);
+                VARIABLE TX_LOC : LINE;
+            BEGIN
+                STD.TEXTIO.write(TX_LOC, string'("Annotate["));
+                STD.TEXTIO.write(TX_LOC, TX_TIME);
+                STD.TEXTIO.write(TX_LOC, string'(", Buzz, "));
+                IEEE.STD_LOGIC_TEXTIO.write(TX_LOC, Buzz);
+                STD.TEXTIO.write(TX_LOC, string'("]"));
+                TX_STR(TX_LOC.all'range) := TX_LOC.all;
+                STD.TEXTIO.writeline(RESULTS, TX_LOC);
+                STD.TEXTIO.Deallocate(TX_LOC);
+            END;
+        BEGIN
+            WAIT for 1 fs;
+            ANNOTATE_sec1(0);
+            ANNOTATE_sec2(0);
+            ANNOTATE_min1(0);
+            ANNOTATE_min2(0);
+            ANNOTATE_hour1(0);
+            ANNOTATE_hour2(0);
+            ANNOTATE_day1(0);
+            ANNOTATE_day2(0);
+            ANNOTATE_month1(0);
+            ANNOTATE_month2(0);
+            ANNOTATE_year1(0);
+            ANNOTATE_year2(0);
+            ANNOTATE_year3(0);
+            ANNOTATE_year4(0);
+            ANNOTATE_sec1_s(0);
+            ANNOTATE_sec2_s(0);
+            ANNOTATE_min1_m(0);
+            ANNOTATE_min2_m(0);
+            ANNOTATE_hour1_h(0);
+            ANNOTATE_hour2_h(0);
+            ANNOTATE_seconds_study1(0);
+            ANNOTATE_seconds_study2(0);
+            ANNOTATE_minutes_study1(0);
+            ANNOTATE_minutes_study2(0);
+            ANNOTATE_seconds_break1(0);
+            ANNOTATE_seconds_break2(0);
+            ANNOTATE_minutes_break1(0);
+            ANNOTATE_Buzz(0);
+            WAIT for OFFSET;
+            TX_TIME := TX_TIME + 100;
+            ANNO_LOOP : LOOP
+                --Rising Edge
+                WAIT for 115 ns;
+                TX_TIME := TX_TIME + 115;
+                ANNOTATE_sec1(TX_TIME);
+                ANNOTATE_sec2(TX_TIME);
+                ANNOTATE_min1(TX_TIME);
+                ANNOTATE_min2(TX_TIME);
+                ANNOTATE_hour1(TX_TIME);
+                ANNOTATE_hour2(TX_TIME);
+                ANNOTATE_day1(TX_TIME);
+                ANNOTATE_day2(TX_TIME);
+                ANNOTATE_month1(TX_TIME);
+                ANNOTATE_month2(TX_TIME);
+                ANNOTATE_year1(TX_TIME);
+                ANNOTATE_year2(TX_TIME);
+                ANNOTATE_year3(TX_TIME);
+                ANNOTATE_year4(TX_TIME);
+                ANNOTATE_sec1_s(TX_TIME);
+                ANNOTATE_sec2_s(TX_TIME);
+                ANNOTATE_min1_m(TX_TIME);
+                ANNOTATE_min2_m(TX_TIME);
+                ANNOTATE_hour1_h(TX_TIME);
+                ANNOTATE_hour2_h(TX_TIME);
+                ANNOTATE_seconds_study1(TX_TIME);
+                ANNOTATE_seconds_study2(TX_TIME);
+                ANNOTATE_minutes_study1(TX_TIME);
+                ANNOTATE_minutes_study2(TX_TIME);
+                ANNOTATE_seconds_break1(TX_TIME);
+                ANNOTATE_seconds_break2(TX_TIME);
+                ANNOTATE_minutes_break1(TX_TIME);
+                ANNOTATE_Buzz(TX_TIME);
+                WAIT for 85 ns;
+                TX_TIME := TX_TIME + 85;
+            END LOOP ANNO_LOOP;
+        END PROCESS;
+
+        PROCESS
+            BEGIN
+                -- -------------  Current Time:  100ns
+                WAIT FOR 100 ns;
+                RST <= '1';
+                hhour1 <= "1000";
+                mmonth2 <= "0001";
+                hour1_A <= "1000";
+                -- -------------------------------------
+                -- -------------  Current Time:  385ns
+                WAIT FOR 285 ns;
+                StopWatch_off <= '1';
+                -- -------------------------------------
+                -- -------------  Current Time:  785ns
+                WAIT FOR 400 ns;
+                RST <= '0';
+                -- -------------------------------------
+                WAIT FOR 415 ns;
+
+                STD.TEXTIO.write(TX_OUT, string'("Total[]"));
+                STD.TEXTIO.writeline(RESULTS, TX_OUT);
+                ASSERT (FALSE) REPORT
+                    "Success! Simulation for annotation completed"
+                    SEVERITY FAILURE;
+            END PROCESS;
+
+    END testbench_arch;
+

@@ -1,0 +1,64 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2007 Xilinx, Inc.
+// All Right Reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 9.2i
+//  \   \         Application : ISE
+//  /   /         Filename : TestBench.tfw
+// /___/   /\     Timestamp : Tue May 15 16:00:43 2018
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: 
+//Design Name: TestBench
+//Device: Xilinx
+//
+`timescale 1ns/1ps
+
+module TestBench;
+    reg CLK = 1'b0;
+    reg RST = 1'b0;
+    wire [3:0] sec1;
+    wire [3:0] sec2;
+    wire [3:0] min1;
+    wire [3:0] min2;
+    wire [3:0] hour1;
+    wire [3:0] hour2;
+
+    parameter PERIOD = 200;
+    parameter real DUTY_CYCLE = 0.5;
+    parameter OFFSET = 100;
+
+    initial    // Clock process for CLK
+    begin
+        #OFFSET;
+        forever
+        begin
+            CLK = 1'b0;
+            #(PERIOD-(PERIOD*DUTY_CYCLE)) CLK = 1'b1;
+            #(PERIOD*DUTY_CYCLE);
+        end
+    end
+
+    Stopwatch UUT (
+        .CLK(CLK),
+        .RST(RST),
+        .sec1(sec1),
+        .sec2(sec2),
+        .min1(min1),
+        .min2(min2),
+        .hour1(hour1),
+        .hour2(hour2));
+
+    initial begin
+        // -------------  Current Time:  100ns
+        #100;
+        RST = 1'b1;
+        // -------------------------------------
+    end
+
+endmodule
+

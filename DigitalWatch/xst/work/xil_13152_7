@@ -1,0 +1,52 @@
+V3 24
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/D/DigitalWatch/Alarm.vhd" 2018/05/14.17:13:27 J.36
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/D/DigitalWatch/DigitalWatch.vhd" 2018/05/14.20:13:49 J.36
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/D/DigitalWatch/StopWatch.vhd" 2018/05/14.20:30:25 J.36
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Alarm.vhd" 2018/05/14.21:08:19 J.36
+EN work/alarmhdl 1526397214 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Alarm.vhd" \
+      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
+      PB ieee/STD_LOGIC_UNSIGNED 1177545583 PH ieee/NUMERIC_STD 1177545583
+AR work/alarmhdl/behavioral 1526397215 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Alarm.vhd" \
+      EN work/alarmhdl 1526397214 CP DigitalWatch CP comparator
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/BCD_Counter.vhd" 2018/05/15.15:52:31 J.36
+EN work/BCD_Counter 1526392375 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/BCD_Counter.vhd" \
+      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
+      PB ieee/STD_LOGIC_UNSIGNED 1177545583
+AR work/BCD_Counter/Behavioral 1526392376 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/BCD_Counter.vhd" \
+      EN work/BCD_Counter 1526392375
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/DigitalWatch.vhd" 2018/05/15.15:27:17 J.36
+EN work/DigitalWatch 1526390852 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/DigitalWatch.vhd" \
+      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
+      PB ieee/STD_LOGIC_UNSIGNED 1177545583 PH ieee/NUMERIC_STD 1177545583
+AR work/dig_watch/Watch 1526390853 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/DigitalWatch.vhd" \
+      EN work/dig_watch 1526305429
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/FullAdder.vhd" 2018/05/15.15:21:42 J.36
+EN work/FullAdder 1526390522 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/FullAdder.vhd" \
+      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
+      PB ieee/STD_LOGIC_UNSIGNED 1177545583 PH ieee/NUMERIC_STD 1177545583
+AR work/FullAdder/FullAdder_arc 1526390523 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/FullAdder.vhd" \
+      EN work/FullAdder 1526390522
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Pomodoro.vhd" 2018/05/15.17:12:11 J.36
+EN work/Pomodoro 1526397141 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Pomodoro.vhd" \
+      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
+      PB ieee/STD_LOGIC_UNSIGNED 1177545583 PH ieee/NUMERIC_STD 1177545583
+AR work/Pomodoro/Behavioral 1526397142 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Pomodoro.vhd" \
+      EN work/Pomodoro 1526397141
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/StopWatch.vhd" 2018/05/15.16:27:12 J.36
+EN work/Stopwatch 1526394441 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/StopWatch.vhd" \
+      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
+      PB ieee/STD_LOGIC_UNSIGNED 1177545583 PH ieee/NUMERIC_STD 1177545583
+AR work/Stopwatch/Watch 1526394442 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/StopWatch.vhd" \
+      EN work/Stopwatch 1526394441

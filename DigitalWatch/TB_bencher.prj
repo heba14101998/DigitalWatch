@@ -1,0 +1,4 @@
+vhdl work "comparator.vhd"
+vhdl work "StopWatch.vhd"
+vhdl work "Alarm.vhd"
+vhdl work "collecting.vhd"

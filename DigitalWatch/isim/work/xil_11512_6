@@ -1,0 +1,40 @@
+V3 21
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/D/DigitalWatch/DigitalWatch.vhd" 2018/05/14.15:31:44 J.36
+EN work/dig_watch 1526304815 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/D/DigitalWatch/DigitalWatch.vhd" \
+      PB ieee/std_logic_1164 1179176983 PB ieee/std_logic_arith 1179176985 \
+      PB ieee/STD_LOGIC_UNSIGNED 1179176991 PB ieee/NUMERIC_STD 1179176997
+AR work/dig_watch/Watch 1526304816 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/D/DigitalWatch/DigitalWatch.vhd" \
+      EN work/dig_watch 1526304815
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/D/DigitalWatch/StopWatch.vhd" 2018/05/14.20:30:25 J.36
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/D/DigitalWatch/TestBench.tfw" 2018/05/14.20:30:35 J.36
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/D/DigitalWatch/TextBench.tfw" 2018/05/14.20:00:51 J.36
+MO work/TextBench \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/D/DigitalWatch/TextBench.tfw" \
+      MI Stopwatch
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/BCD_Counter.vhd" 2018/05/15.15:52:31 J.36
+EN work/BCD_Counter 1526392424 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/BCD_Counter.vhd" \
+      PB ieee/std_logic_1164 1179176983 PB ieee/std_logic_arith 1179176985 \
+      PB ieee/STD_LOGIC_UNSIGNED 1179176991
+AR work/BCD_Counter/Behavioral 1526392425 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/BCD_Counter.vhd" \
+      EN work/BCD_Counter 1526392424
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/StopWatch.vhd" 2018/05/15.15:45:08 J.36
+EN work/Stopwatch 1526392084 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/StopWatch.vhd" \
+      PB ieee/std_logic_1164 1179176983 PB ieee/std_logic_arith 1179176985 \
+      PB ieee/STD_LOGIC_UNSIGNED 1179176991 PB ieee/NUMERIC_STD 1179176997
+AR work/Stopwatch/Watch 1526392085 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/StopWatch.vhd" \
+      EN work/Stopwatch 1526392084
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/TB.tfw" 2018/05/15.15:53:38 J.36
+MO work/TB FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/TB.tfw" \
+      MI BCD_Counter
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/TestBench.tfw" 2018/05/15.15:50:21 J.36
+MO work/TestBench \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/TestBench.tfw" \
+      MI Stopwatch
+FL $XILINX/verilog/src/glbl.v 2007/05/18.23:22:56 J.36
+MO work/glbl FL $XILINX/verilog/src/glbl.v

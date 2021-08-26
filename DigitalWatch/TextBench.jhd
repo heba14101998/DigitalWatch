@@ -1,0 +1,3 @@
+MODULE TextBench
+SUBMODULE Stopwatch
+INSTANCE UUT

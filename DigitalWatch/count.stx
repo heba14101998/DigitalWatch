@@ -1,0 +1,40 @@
+Release 9.2i - xst J.36
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.37 s | Elapsed : 0.00 / 1.00 s
+ 
+--> 
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/Electric/second term/logic/VHDL/DigitalWatch/Count.vhd" in Library work.
+ERROR:HDLParsers:3312 - "D:/Electric/second term/logic/VHDL/DigitalWatch/Count.vhd" Line 5. Undefined symbol 'STD_LOGIC'.
+ERROR:HDLParsers:1209 - "D:/Electric/second term/logic/VHDL/DigitalWatch/Count.vhd" Line 5. STD_LOGIC: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "D:/Electric/second term/logic/VHDL/DigitalWatch/Count.vhd" Line 8. Undefined symbol 'STD_LOGIC_VECTOR'.
+ERROR:HDLParsers:1209 - "D:/Electric/second term/logic/VHDL/DigitalWatch/Count.vhd" Line 8. STD_LOGIC_VECTOR: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3010 - "D:/Electric/second term/logic/VHDL/DigitalWatch/Count.vhd" Line 11. Entity count does not exist.
+ERROR:HDLParsers:3312 - "D:/Electric/second term/logic/VHDL/DigitalWatch/Count.vhd" Line 13. Undefined symbol 'std_logic_vector'.
+ERROR:HDLParsers:1209 - "D:/Electric/second term/logic/VHDL/DigitalWatch/Count.vhd" Line 13. std_logic_vector: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3313 - "D:/Electric/second term/logic/VHDL/DigitalWatch/Count.vhd" Line 15. Undefined symbol 'EN'.  Should it be: oN or iN?
+ERROR:HDLParsers:1209 - "D:/Electric/second term/logic/VHDL/DigitalWatch/Count.vhd" Line 15. EN: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "D:/Electric/second term/logic/VHDL/DigitalWatch/Count.vhd" Line 15. Undefined symbol 'RST'.
+ERROR:HDLParsers:1209 - "D:/Electric/second term/logic/VHDL/DigitalWatch/Count.vhd" Line 15. RST: Undefined symbol (last report in this block)
+ERROR:HDLParsers:3312 - "D:/Electric/second term/logic/VHDL/DigitalWatch/Count.vhd" Line 18. Undefined symbol 'temp'.
+ERROR:HDLParsers:3312 - "D:/Electric/second term/logic/VHDL/DigitalWatch/Count.vhd" Line 19. Undefined symbol 'CLK'.
+ERROR:HDLParsers:808 - "D:/Electric/second term/logic/VHDL/DigitalWatch/Count.vhd" Line 19. = can not have such operands in this context.
+ERROR:HDLParsers:1209 - "D:/Electric/second term/logic/VHDL/DigitalWatch/Count.vhd" Line 21. temp: Undefined symbol (last report in this block)
+ERROR:HDLParsers:164 - "D:/Electric/second term/logic/VHDL/DigitalWatch/Count.vhd" Line 27. parse error, unexpected IF, expecting PROCESS
+WARNING:HDLParsers:1406 - "D:/Electric/second term/logic/VHDL/DigitalWatch/Count.vhd" Line 15. No sensitivity list and no wait in the process
+ERROR:HDLParsers:3312 - "D:/Electric/second term/logic/VHDL/DigitalWatch/Count.vhd" Line 30. Undefined symbol 'Q'.
+ERROR:HDLParsers:3312 - "D:/Electric/second term/logic/VHDL/DigitalWatch/Count.vhd" Line 30. Undefined symbol 'temp'.
+ERROR:HDLParsers:1209 - "D:/Electric/second term/logic/VHDL/DigitalWatch/Count.vhd" Line 30. temp: Undefined symbol (last report in this block)
+CPU : 0.39 / 0.76 s | Elapsed : 0.00 / 1.00 s
+ 
+--> 
+
+Total memory usage is 228992 kilobytes
+
+Number of errors   :   19 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

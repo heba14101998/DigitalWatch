@@ -1,0 +1,22 @@
+Release 9.2i - xst J.36
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 1.10 s | Elapsed : 0.00 / 1.00 s
+ 
+--> 
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Alarm.vhd" in Library work.
+Entity <alarm> compiled.
+Entity <alarm> (Architecture <behavioral>) compiled.
+CPU : 1.17 / 2.28 s | Elapsed : 1.00 / 2.00 s
+ 
+--> 
+
+Total memory usage is 229568 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,0 +1,33 @@
+V3 18
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Calculator.vhd" 2018/05/15.23:47:05 J.36
+EN work/calc 1526420844 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Calculator.vhd" \
+      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
+      PB ieee/STD_LOGIC_UNSIGNED 1177545583
+AR work/calc/Behavioral 1526420845 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Calculator.vhd" \
+      EN work/calc 1526420844 CP count CP addder CP sub CP mult CP div
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Division.vhd" 2018/05/15.23:38:50 J.36
+EN work/div 1526420842 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Division.vhd" \
+      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
+      PB ieee/STD_LOGIC_UNSIGNED 1177545583
+AR work/div/Behavioral 1526420843 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Division.vhd" \
+      EN work/div 1526420842
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Multiplication.vhd" 2018/05/15.23:40:02 J.36
+EN work/mult 1526420840 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Multiplication.vhd" \
+      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
+      PB ieee/STD_LOGIC_UNSIGNED 1177545583
+AR work/mult/Behavioral 1526420841 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Multiplication.vhd" \
+      EN work/mult 1526420840 CP f_a
+FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Substraction.vhd" 2018/05/15.23:40:44 J.36
+EN work/sub 1526420838 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Substraction.vhd" \
+      PB ieee/std_logic_1164 1177545575 PB ieee/std_logic_arith 1177545576 \
+      PB ieee/STD_LOGIC_UNSIGNED 1177545583
+AR work/sub/Behavioral 1526420839 \
+      FL "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Substraction.vhd" \
+      EN work/sub 1526420838 CP f_a

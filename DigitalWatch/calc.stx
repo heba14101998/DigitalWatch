@@ -1,0 +1,31 @@
+Release 9.2i - xst J.36
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.42 s | Elapsed : 0.00 / 1.00 s
+ 
+--> 
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Substraction.vhd" in Library work.
+Entity <sub> compiled.
+Entity <sub> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Multiplication.vhd" in Library work.
+Entity <mult> compiled.
+Entity <mult> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Division.vhd" in Library work.
+Entity <div> compiled.
+Entity <div> (Architecture <behavioral>) compiled.
+Compiling vhdl file "C:/Users/HaBosh/Desktop/Dgital Watch/DigitalWatch/Calculator.vhd" in Library work.
+Entity <calc> compiled.
+Entity <calc> (Architecture <behavioral>) compiled.
+CPU : 1.44 / 1.86 s | Elapsed : 1.00 / 2.00 s
+ 
+--> 
+
+Total memory usage is 230208 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

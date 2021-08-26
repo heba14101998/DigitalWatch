@@ -1,0 +1,6 @@
+vhdl work "comparator.vhd"
+vhdl work "StopWatch.vhd"
+vhdl work "Alarm.vhd"
+vhdl work "collecting.vhd"
+verilog work "TEST.tfw"
+verilog work "E:/Xilinx/verilog/src/glbl.v"

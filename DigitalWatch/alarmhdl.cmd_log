@@ -1,0 +1,2 @@
+xst -ise "C:/Users/HaBosh/Desktop/Dgital Watch/D/DigitalWatch/DigitalWatch.ise" -intstyle ise -ifn alarmhdl.xst -ofn alarmhdl.syr
+xst -ise "C:/Users/HaBosh/Desktop/Dgital Watch/D/DigitalWatch/DigitalWatch.ise" -intstyle ise -ifn alarmhdl.xst -ofn alarmhdl.syr
